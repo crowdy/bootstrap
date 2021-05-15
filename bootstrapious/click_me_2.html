@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>.sk-rotating-plane {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        margin: 40px auto;
+        -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+        animation: sk-rotatePlane 1.2s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes sk-rotatePlane {
+        0% {
+            -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        }
+
+        50% {
+            -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        }
+
+        100% {
+            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
+    }
+
+    @keyframes sk-rotatePlane {
+        0% {
+            -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        }
+
+        50% {
+            -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        }
+
+        100% {
+            -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
+    }
+    </style>
+
+</head>
+<body>
+<div class="container py-5">
+    <div class="row">
+        <div class="col-6">
+            <div class="card shadow position-relative mb-5" id="card">
+
+                <div class="card-body">
+                    <p>
+                        kkjdkasjd apodkasodk apodka dpoakdoas dpkasdaspdkasopdkas
+                    </p>
+                    <p>
+                        kkjdkasjd apodkasodk apodka dpoakdoas dpkasdaspdkasopdkas
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="button" class="btn btn-primary">
+        Click me
+    </button>
+    <p class="mb-0">
+        <a href="https://bootstrapious.com/snippets">Bootstrap snippet by Bootstrapious</a>
+    </p>
+</div>
+
+<script>$(function() {
+    $('#button').on('click', function() {
+        var spinner = ' <div class="spinner" style="position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);"><div class="sk-rotating-plane"></div></div>'
+        $('#card').append(spinner);
+    })
+});
+</script>
+
+</body>
+</html>

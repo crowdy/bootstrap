@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        /*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .bg-center {
+            background-position: center center;
+        }
+
+        code {
+            background: #fff;
+            padding: 0.2rem;
+            border-radius: 0.1rem;
+            text-shadow: none;
+        }
+
+        .demo-text {
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 1);
+        }
+
+        /*
+        *
+        * ==========================================
+        * CUSTOM UTIL CLASSES
+        * ==========================================
+        *
+        */
+        .overlay-gradient {
+            position: relative;
+        }
+
+        .overlay-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to bottom, #4FC3F7, #8E24AA);
+            display: block;
+            opacity: 0.55;
+        }
+
+        .overlay-dark {
+            position: relative;
+        }
+
+        .overlay-dark::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #000;
+            display: block;
+            opacity: 0.55;
+        }
+
+        .overlay-content {
+            z-index: 99;
+            position: relative;
+        }
+
+    </style>
+
+</head>
+<body>
+<!-- Demo header-->
+<section class="py-5 header text-center">
+    <div class="container">
+        <header>
+            <h1 class="display-4 mb-1">Bootstrap overlay</h1>
+            <p class="text-muted font-italic mb-1">Create a nicely styled transparent overlay for Bootstrap 4 blocks.</p>
+            <p class="text-muted font-italic">Snippet by
+                <a class="text-dark" href="https://bootstrapious.com/">
+                    <u>Bootstrapious</u>
+                </a>
+            </p>
+        </header>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <!-- Block with a gradient transparent overlay -->
+        <div class="overlay-gradient bg-cover bg-center p-5 mb-5" style="background: url(https://i.postimg.cc/Xqdb0gzM/forest-1.jpg)">
+            <div class="overlay-content text-white text-center p-5">
+                <h2>Gradient overlay</h2>
+                <p class="lead demo-text mb-1">Wrap your content inside a relative parent <code>.overlay-gradient</code></p>
+                <p class="lead demo-text mb-1">Using pseudo elements apply a full dimensioned cover with a transparent gradient.</p>
+                <p class="lead demo-text mb-4">Put all your content inside a child div that has higher <code>z-index</code> than the overlay. i.e. <code>.overlay-content</code></p>
+                <a class="btn btn-outline-light rounded-0 px-5" href="#">Get started</a>
+            </div>
+        </div>
+
+        <!-- Block with a dark transparent overlay -->
+        <div class="overlay-dark bg-cover bg-center p-5 mb-5" style="background: url(https://i.postimg.cc/Xqdb0gzM/forest-1.jpg)">
+            <div class="overlay-content text-white text-center p-5">
+                <h2>Dark transparent overlay</h2>
+                <p class="lead demo-text mb-1">Wrap your content inside a relative parent <code>.overlay-dark</code></p>
+                <p class="lead demo-text mb-1">Using pseudo elements apply a full dimensioned cover with a dark transparent overlay.</p>
+                <p class="lead demo-text mb-4">Put all your content inside a child div that has higher <code>z-index</code> than the overlay. i.e. <code>.overlay-content</code></p>
+                <a class="btn btn-outline-light rounded-0 px-5" href="#">Get started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
