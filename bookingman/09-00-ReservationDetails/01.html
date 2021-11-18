@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(35.6620, 139.7038),
+                zoom: 15,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+    </script>
+    <style>
+        #wrapper {
+            position: relative;
+        }
+
+        #over_map {
+            position: absolute;
+            margin-left: auto;
+            top: 10px;
+            left: 10px;
+            z-index: 99;
+            width: 40%;
+            text-align: center;
+            background: #dae0e5
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #4ca1af;
+            background-image: linear-gradient(135deg, #4678b6 0%, #7f9295 100%);
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Sticky navbar-->
+<header class="header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container"><a class="navbar-brand" href="#">
+            <strong class="h6 mb-0 font-weight-bold text-uppercase">Sticky navbar</strong></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<footer class="py-4 bg-dark flex-shrink-0 fixed-bottom">
+    <div class="container text-center">
+        <a href="https://bootstrapious.com/snippets" class="text-muted">Bootstrap snippet by Bootstrapious</a>
+    </div>
+</footer>
+
+
+</body>
+</html>
